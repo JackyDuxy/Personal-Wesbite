@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jacky Du — Student &amp; Maker</title>
+  <meta name="description" content="Jacky Du is a high school student who loves building apps, websites and other things, and figuring out how everything works.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232997ff'/%3E%3Cstop offset='.55' stop-color='%23a86bff'/%3E%3Cstop offset='1' stop-color='%23ff6a88'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23g)'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var r = document.documentElement, t = null;
+      r.classList.add('js');
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = null;
+      if (t) r.dataset.theme = t;
+      r.dataset.resolved = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ Global navigation ============ -->
+  <header>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <div class="nav__inner">
+        <ul class="nav__list">
+          <li class="nav__logo">
+            <a href="#top" aria-label="Jacky Du — Home"><span class="orb" aria-hidden="true"></span></a>
+          </li>
+          <li><a href="#about" data-spy-link="about">About</a></li>
+          <li><a href="#work" data-spy-link="work">Projects</a></li>
+          <li><a href="#journey" data-spy-link="journey">Story</a></li>
+          <li><a href="#specs" data-spy-link="specs">Specs</a></li>
+          <li><a href="#contact" data-spy-link="contact">Contact</a></li>
+        </ul>
+        <button class="nav__theme" id="theme-toggle" type="button" aria-label="Switch appearance">
+          <svg class="i-moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.4 9.6A5.6 5.6 0 0 1 6.4 2.6a5.6 5.6 0 1 0 7 7Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.9"/><path d="M8 1.4v1.3M8 13.3v1.3M1.4 8h1.3M13.3 8h1.3M3.3 3.3l.9.9M11.8 11.8l.9.9M12.7 3.3l-.9.9M4.2 11.8l-.9.9"/></svg>
+        </button>
+        <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#journey">Story</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" data-hero>
+      <div class="hero__glow" aria-hidden="true"><div class="hero__orb"></div></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow rise" style="--i:0">Hey, I’m</p>
+        <h1 class="hero__title rise" style="--i:1"><span class="grad">Jacky Du.</span></h1>
+        <p class="hero__sub rise" style="--i:2">Student, builder, and endlessly curious.<br>I love making things and figuring out how they work.</p>
+        <div class="hero__cta rise" style="--i:3">
+          <a class="btn" href="#work">See my projects</a>
+          <a class="link" href="#contact">Say hello<span class="chev" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Statement (scroll-driven text reveal) ============ -->
+    <section class="statement" data-statement aria-label="Philosophy">
+      <div class="statement__sticky">
+        <p class="statement__text" data-words>I believe the best ideas come from staying curious. I like taking things apart, finding out how they work, and then trying to build something better. I’m still learning, and honestly, that’s the fun part.</p>
+      </div>
+    </section>
+
+    <!-- ============ Projects (highlights carousel) ============ -->
+    <section class="work section section--alt" id="work" data-spy="work">
+      <div class="wrap wrap--wide">
+        <h2 class="h-section reveal">Projects. <span class="dim">Things I’ve built and made.</span></h2>
+      </div>
+
+      <div class="scroller reveal" id="scroller" tabindex="0" role="region" aria-label="Projects">
+        <!-- PLACEHOLDER PROJECTS — replace copy, links and art with your own. -->
+        <article class="card theme-blue">
+          <div class="card__text">
+            <p class="card__eyebrow">Personal project · App</p>
+            <h3 class="card__title">StudyBuddy. A planner that actually gets you to study.</h3>
+          </div>
+          <div class="art art--phone" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <button class="card__plus" type="button" aria-label="Learn more about StudyBuddy"></button>
+          <div class="card__more" hidden>
+            <p>I built StudyBuddy because my own to-do lists never worked. It breaks big assignments into small steps, reminds you at the right moments, and celebrates when you finish. It started as a weekend experiment and now a few of my friends use it every day.</p>
+            <ul class="tags"><li>Personal project</li><li>App design</li><li>Python</li><li>2025</li></ul>
+            <p><a class="link" href="#">See how I built it<span class="chev" aria-hidden="true"></span></a></p>
+          </div>
+        </article>
+
+        <article class="card theme-night">
+          <div class="card__text">
+            <p class="card__eyebrow">Robotics team</p>
+            <h3 class="card__title">Monolith. Building a robot in six weeks.</h3>
+          </div>
+          <div class="art art--rings" aria-hidden="true"><i></i><i></i></div>
+          <button class="card__plus" type="button" aria-label="Learn more about Monolith"></button>
+          <div class="card__more" hidden>
+            <p>Six weeks, one very stubborn robot, and a team of friends who mostly lived on pizza. I worked on the code that drives the arm and helped design the driver dashboard. We broke it many times, and learned more from that than from anything going right.</p>
+            <ul class="tags"><li>Team project</li><li>Robotics</li><li>Java</li><li>2025</li></ul>
+            <p><a class="link" href="#">Read the story<span class="chev" aria-hidden="true"></span></a></p>
+          </div>
+        </article>
+
+        <article class="card theme-sand">
+          <div class="card__text">
+            <p class="card__eyebrow">Science fair</p>
+            <h3 class="card__title">Meridian. Turning messy data into a story.</h3>
+          </div>
+          <div class="art art--bars" aria-hidden="true"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:82%"></i><i style="--h:68%"></i><i style="--h:100%"></i></div>
+          <button class="card__plus" type="button" aria-label="Learn more about Meridian"></button>
+          <div class="card__more" hidden>
+            <p>For our science fair project, I collected a semester’s worth of data and built charts that people could actually understand at a glance. The hardest part wasn’t the math. It was deciding what to leave out.</p>
+            <ul class="tags"><li>Science fair</li><li>Data</li><li>Spreadsheets &amp; Python</li><li>2024</li></ul>
+            <p><a class="link" href="#">Read the story<span class="chev" aria-hidden="true"></span></a></p>
+          </div>
+        </article>
+
+        <article class="card theme-mint">
+          <div class="card__text">
+            <p class="card__eyebrow">Club website</p>
+            <h3 class="card__title">Fern. A home for our garden club.</h3>
+          </div>
+          <div class="art art--dots" aria-hidden="true"><i></i></div>
+          <button class="card__plus" type="button" aria-label="Learn more about Fern"></button>
+          <div class="card__more" hidden>
+            <p>Our school’s garden club needed somewhere to post meeting times, plant schedules and photos, so I built them a website. It’s simple, fast, and works great on a phone. Membership doubled the next semester.</p>
+            <ul class="tags"><li>Web design</li><li>HTML &amp; CSS</li><li>Volunteer</li><li>2024</li></ul>
+            <p><a class="link" href="#">Visit the site<span class="chev" aria-hidden="true"></span></a></p>
+          </div>
+        </article>
+
+        <article class="card theme-ember">
+          <div class="card__text">
+            <p class="card__eyebrow">Just for fun</p>
+            <h3 class="card__title">Ember. A tiny habit tracker.</h3>
+          </div>
+          <div class="art art--orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+          <button class="card__plus" type="button" aria-label="Learn more about Ember"></button>
+          <div class="card__more" hidden>
+            <p>A weekend project that turned into something I use every day. One tap a day, a streak that never guilt-trips you, and a little glow that gets brighter the longer you keep going.</p>
+            <ul class="tags"><li>Side project</li><li>JavaScript</li><li>2023</li></ul>
+            <p><a class="link" href="#">View on GitHub<span class="chev" aria-hidden="true"></span></a></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="wrap wrap--wide">
+        <div class="scroller__controls">
+          <button class="round" id="prev" type="button" aria-label="Previous project"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+          <button class="round" id="next" type="button" aria-label="Next project"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About (bento) ============ -->
+    <section class="about section" id="about" data-spy="about">
+      <div class="wrap wrap--wide">
+        <h2 class="h-section reveal">Get to know me. <span class="dim">The short version.</span></h2>
+
+        <div class="bento">
+          <div class="tile tile--hero dark reveal">
+            <p class="tile__eyebrow">About</p>
+            <h3 class="tile__big">Curious about pretty much everything.</h3>
+            <p class="tile__body">I’m a high school student who loves building things: apps, websites, robots, the occasional questionable science experiment. When I’m not in class, I’m usually somewhere between a half-finished project and a brand-new idea.</p>
+          </div>
+
+          <div class="tile tile--stat reveal" style="--d:1">
+            <p class="stat grad">3</p>
+            <p class="tile__label">clubs and teams I’m part of.</p>
+          </div>
+
+          <div class="tile tile--stat reveal" style="--d:2">
+            <p class="stat grad">10+</p>
+            <p class="tile__label">projects built, and counting.</p>
+          </div>
+
+          <div class="tile tile--wide reveal" style="--d:1">
+            <p class="tile__eyebrow">Right now</p>
+            <ul class="now">
+              <li><span>Building</span><b>A study planner app</b></li>
+              <li><span>Reading</span><b>Project Hail Mary</b></li>
+              <li><span>Learning</span><b>Calculus &amp; Python</b></li>
+            </ul>
+          </div>
+
+          <div class="tile tile--wide reveal">
+            <p class="tile__eyebrow">Toolkit</p>
+            <ul class="chips">
+              <li>Python</li><li>JavaScript</li><li>Java</li><li>HTML &amp; CSS</li><li>Figma</li><li>Canva</li><li>Arduino</li><li>Public speaking</li>
+            </ul>
+          </div>
+
+          <div class="tile tile--fav reveal" style="--d:1">
+            <p class="tile__eyebrow">Favorite class</p>
+            <p class="fav">Computer Science</p>
+            <p class="tile__label">Followed closely by physics.</p>
+          </div>
+
+          <div class="tile tile--off reveal" style="--d:2">
+            <p class="tile__eyebrow">Off the clock</p>
+            <p class="tile__med">Running, late-night playlists and way too much boba.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Story (timeline) ============ -->
+    <section class="journey section section--alt" id="journey" data-spy="journey">
+      <div class="wrap">
+        <div class="journey__grid">
+          <div class="journey__head">
+            <h2 class="h-section reveal">My story <span class="dim">so far.</span></h2>
+            <p class="lead reveal" style="--d:1">A few moments that shaped what I care about and what I make.</p>
+          </div>
+
+          <ol class="timeline" data-timeline>
+            <!-- PLACEHOLDER MILESTONES — replace with your own. -->
+            <li class="tl reveal">
+              <time>Now</time>
+              <h3>High school. Building and learning.</h3>
+              <p>Balancing classes, clubs and side projects, and trying to make something new every month. Figuring out what I want to do next.</p>
+            </li>
+            <li class="tl reveal">
+              <time>Last year</time>
+              <h3>Joined the robotics team</h3>
+              <p class="org">Robotics Club</p>
+              <p>My first time building something with a real team and a real deadline. I learned to debug under pressure, and to ask for help early.</p>
+            </li>
+            <li class="tl reveal">
+              <time>Middle school</time>
+              <h3>Built my first website</h3>
+              <p>A bright pink page about my favorite game. It was terrible, and I was so proud of it. That was the moment I got hooked.</p>
+            </li>
+            <li class="tl reveal">
+              <time>The beginning</time>
+              <h3>Made my first game</h3>
+              <p>A tiny game in Scratch, a lot of bugs, and the discovery that I could make things appear on a screen out of nothing.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Specs ============ -->
+    <section class="specs section" id="specs" data-spy="specs">
+      <div class="wrap">
+        <h2 class="h-section reveal">Specs. <span class="dim">Everything under the hood.</span></h2>
+
+        <div class="specs__list">
+          <div class="spec reveal">
+            <h3>Academics</h3>
+            <div class="spec__items">
+              <div><h4>Favorite subjects</h4><p>Computer science, physics and, surprisingly, English.</p></div>
+              <div><h4>Exploring</h4><p>Calculus, data science and how to write a really good essay.</p></div>
+            </div>
+          </div>
+
+          <div class="spec reveal">
+            <h3>Activities</h3>
+            <div class="spec__items">
+              <div><h4>Clubs &amp; teams</h4><p>Robotics Club, Coding Club and cross country.</p></div>
+              <div><h4>Giving back</h4><p>Weekend tutoring at the local library, and running the garden club website.</p></div>
+            </div>
+          </div>
+
+          <div class="spec reveal">
+            <h3>Toolkit</h3>
+            <div class="spec__items">
+              <div><h4>Languages</h4><p>Python, JavaScript, Java, HTML &amp; CSS.</p></div>
+              <div><h4>Design</h4><p>Figma, Canva, Procreate.</p></div>
+              <div><h4>Hardware</h4><p>Arduino, breadboards and a lot of jumper wires.</p></div>
+            </div>
+          </div>
+
+          <div class="spec reveal">
+            <h3>Performance</h3>
+            <div class="spec__items">
+              <div><h4>Core</h4><p>Curiosity, stubbornness and an unreasonable amount of snacks.</p></div>
+              <div><h4>Memory</h4><p>Remembers every formula. Forgets where I left my charger.</p></div>
+              <div><h4>Battery</h4><p>Fully charged by 3 p.m. Runs on boba after that.</p></div>
+            </div>
+          </div>
+
+          <div class="spec reveal">
+            <h3>Availability</h3>
+            <div class="spec__items">
+              <div><h4>Status</h4><p class="status"><span class="dot" aria-hidden="true"></span>Open to new projects and summer programs</p></div>
+              <div><h4>Connectivity</h4><p>Send me an email. I reply to everything (after homework).</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact dark" id="contact" data-spy="contact">
+      <div class="contact__glow" aria-hidden="true"><div class="hero__orb"></div></div>
+      <div class="wrap">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="contact__title reveal" style="--d:1"><span class="grad">Let’s make something great.</span></h2>
+        <p class="contact__sub reveal" style="--d:2">Got an idea, a project, or just want to say hi? I’d love to hear from you.</p>
+        <div class="contact__cta reveal" style="--d:3">
+          <a class="btn" href="mailto:hello@example.com">Say hello</a>
+          <a class="link" href="#work">See my projects<span class="chev" aria-hidden="true"></span></a>
+        </div>
+        <ul class="socials reveal" style="--d:4">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__crumb"><a href="#top" aria-label="Back to top"><span class="orb orb--sm" aria-hidden="true"></span></a><span class="sep" aria-hidden="true">›</span>Jacky Du</p>
+      <p class="footer__note">Hand-built with HTML, CSS and a little JavaScript. No frameworks, no trackers, no cookies. Typeset in your device’s system font.</p>
+      <div class="footer__cols">
+        <div>
+          <h3>Explore</h3>
+          <ul><li><a href="#about">About</a></li><li><a href="#work">Projects</a></li><li><a href="#journey">Story</a></li><li><a href="#specs">Specs</a></li></ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul><li><a href="mailto:hello@example.com">Email</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li></ul>
+        </div>
+        <div>
+          <h3>More</h3>
+          <ul><li><a href="#top">Back to top</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">Copyright © <span id="year">2026</span> Jacky Du. All rights reserved.</p>
+        <div class="footer__theme">
+          <span id="appearance-label">Appearance</span>
+          <div class="seg" data-theme-seg data-value="auto" role="group" aria-labelledby="appearance-label">
+            <button type="button" data-theme-set="auto" aria-pressed="true">Auto</button>
+            <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+            <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Project sheet ============ -->
+  <dialog class="sheet" id="sheet" aria-label="Project details">
+    <div class="sheet__panel">
+      <button class="sheet__close" type="button" aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg></button>
+      <div class="sheet__scroll" id="sheet-body"></div>
+    </div>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
